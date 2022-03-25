@@ -2,7 +2,7 @@
  * JavaDiceRoll Version1.0
  * Frank Bernal
  * CIS 084 Java Programming
- * Input: None
+ * Input: Developer input for sides on die and total rolls
  * Output: Histogram of 1,000 Dice Rolls
  * Date
  */
