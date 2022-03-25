@@ -4,7 +4,7 @@
  * CIS 084 Java Programming
  * Input: Developer input for sides on die and total rolls
  * Output: Histogram of 1,000 Dice Rolls
- * Date
+ * 25 Mar 2022
  */
 
 package javadiceroll;
