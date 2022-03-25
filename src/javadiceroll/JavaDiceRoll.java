@@ -16,20 +16,33 @@ public class JavaDiceRoll {
 
     // Global stuff
     private static final int SIDES_ON_DIE = 6;
+    private static final int TOTAL_ROLLS = 1000;
     public static void main(String[] args) {
         
         // Local variables
-        // Using Math.random for random number
-        // Multiplied by 6 (SIDES_ON_DIE) makes selection 0-5
-        // Adding 1 makes the selection 1-6
-        int dieOne = (int)(Math.random()*SIDES_ON_DIE)+1;
-        int dieTwo = (int)(Math.random()*SIDES_ON_DIE)+1;
-        int sumOfDice = dieOne + dieTwo;
+        int dieOne;
+        int dieTwo;
+        int sumOfDice;
+        // Array to store results of 1,000 dice rolls
+        int[] pointCount = new int[13];
+        
+        for (int i = 0; i < TOTAL_ROLLS; i++) {
+            // Using Math.random for random number
+            // Multiplied by 6 (SIDES_ON_DIE) makes selection 0-5
+            // Adding 1 makes the selection 1-6
+            dieOne = (int)(Math.random()*SIDES_ON_DIE)+1;
+            dieTwo = (int)(Math.random()*SIDES_ON_DIE)+1;
+            // Store sum of two dice
+            sumOfDice = dieOne + dieTwo;
+            pointCount[sumOfDice]++;
+        }
         
         // Test Print
-        System.out.printf ("Die one rolled: %2d\n", dieOne);
-        System.out.printf ("Die two rolled: %2d\n", dieTwo);
-        System.out.printf ("Sum of dice:    %2d\n", sumOfDice); 
+        System.out.println ("Roll       Total Rolls");
+        for (int i = 2; i <=12; i++) {
+            System.out.printf ("%3d           %3d\n", i, pointCount[i]);
+        }
+        
     }   // End of PSV Main
     
 }   // End of Class
