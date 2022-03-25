@@ -14,7 +14,7 @@ import java.lang.Math;
 
 public class JavaDiceRoll {
 
-    // Global stuff
+    // Global Constants
     private static final int SIDES_ON_DIE = 6;    // Using a 6 sided die
     private static final int TOTAL_ROLLS = 1000;  // Project requires 1000 rolls
     
